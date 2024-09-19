@@ -1,70 +1,78 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Formik and Yup Form Validation
 
-## Available Scripts
+This project is a simple form built with React, Formik, and Yup for form handling and validation. It demonstrates basic user input validation including fields like name, email, password, and terms agreement.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Form handling using **Formik**.
+- Validation schema with **Yup**.
+- Custom input validation for name, email, password, and password confirmation.
+- User must accept the terms and conditions before submitting.
+- Styled with basic **CSS** for a clean user interface.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+.
+├── public
+│   └── index.html
+├── src
+│   ├── App.js
+│   ├── App.css
+│   └── index.js
+├── .gitignore
+└── README.md
+Technologies Used
+React for building the user interface.
+Formik for form handling.
+Yup for form validation schema.
+CSS for styling.
+Installation and Setup
+Clone the repository:
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+git clone https://github.com/sriram1224/Formik_Yup.git
+Navigate to the project folder:
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+cd Formik_Yup
+Install the dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm install
+Run the app:
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm start
+Open your browser and navigate to http://localhost:3000 to view the app.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Usage
+Fill out the form with valid details:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Name: Required.
+Email: Must match regex@gmail.com.
+Password: Must be rishiMe@199.
+Confirm Password: Must match the password.
+Terms and Conditions: Must be checked.
+The submit button will be enabled when all fields are valid.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Deployment
+To deploy the app:
 
-## Learn More
+Ensure you have committed your changes:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+git add .
+git commit -m "your commit message"
+Push the code to GitHub:
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+git push -u origin main
+The app is now available in your GitHub repository: Formik_Yup.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
