@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import "./App.css";
 
@@ -40,108 +40,101 @@ const App = () => {
               console.log("Form Submitted:", values);
             }}
           >
-            {({
-              values,
-              errors,
-              touched,
-              handleChange,
-              handleBlur,
-              handleSubmit,
-              isValid,
-              dirty,
-            }) => (
-              <form className="register-form" onSubmit={handleSubmit}>
+            {({ isValid, dirty }) => (
+              <Form className="register-form">
                 <div className="form-group">
                   <label htmlFor="name">
                     <i className="zmdi zmdi-account material-icons-name"></i>
                   </label>
-                  <input
+                  <Field
                     type="text"
                     name="name"
                     id="name"
                     placeholder="Your Name"
                     className="form-input"
-                    value={values.name}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
                   />
-                  {touched.name && errors.name && (
-                    <div className="error-message">{errors.name}</div>
-                  )}
+                  <ErrorMessage
+                    name="name"
+                    component="div"
+                    className="error-message"
+                  />
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="email">
                     <i className="zmdi zmdi-email"></i>
                   </label>
-                  <input
+                  <Field
                     type="email"
                     name="email"
                     id="email"
                     placeholder="Your Email"
                     className="form-input"
-                    value={values.email}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
                   />
-                  {touched.email && errors.email && (
-                    <div className="error-message">{errors.email}</div>
-                  )}
+                  <ErrorMessage
+                    name="email"
+                    component="div"
+                    className="error-message"
+                  />
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="pass">
                     <i className="zmdi zmdi-lock"></i>
                   </label>
-                  <input
+                  <Field
                     type="password"
                     name="pass"
                     id="pass"
                     placeholder="Password"
                     className="form-input"
-                    value={values.pass}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
                   />
-                  {touched.pass && errors.pass && (
-                    <div className="error-message">{errors.pass}</div>
-                  )}
+                  <ErrorMessage
+                    name="pass"
+                    component="div"
+                    className="error-message"
+                  />
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="re_pass">
                     <i className="zmdi zmdi-lock-outline"></i>
                   </label>
-                  <input
+                  <Field
                     type="password"
                     name="re_pass"
                     id="re_pass"
                     placeholder="Confirm your Password"
                     className="form-input"
-                    value={values.re_pass}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
                   />
-                  {touched.re_pass && errors.re_pass && (
-                    <div className="error-message">{errors.re_pass}</div>
-                  )}
+                  <ErrorMessage
+                    name="re_pass"
+                    component="div"
+                    className="error-message"
+                  />
                 </div>
 
                 <div className="form-group">
-                  <input
+                  <Field
                     type="checkbox"
                     name="agreeTerm"
                     id="agree-term"
                     className="agree-term"
-                    value={values.agreeTerm}
-                    onChange={handleChange}
                   />
                   <label htmlFor="agree-term" className="label-agree-term">
-                    I agree to all statements in the Terms of Service
+                    <span>
+                      <span></span>
+                    </span>
+                    I agree to all statements in the{" "}
+                    <a href="#" className="term-service">
+                      Terms of Service
+                    </a>
                   </label>
-                  {touched.agreeTerm && errors.agreeTerm && (
-                    <div className="error-message">{errors.agreeTerm}</div>
-                  )}
+                  <ErrorMessage
+                    name="agreeTerm"
+                    component="div"
+                    className="error-message"
+                  />
                 </div>
 
                 <div className="form-group form-button">
@@ -153,10 +146,9 @@ const App = () => {
                     Register
                   </button>
                 </div>
-              </form>
+              </Form>
             )}
           </Formik>
-
           <div className="signup-image">
             <figure>
               <img

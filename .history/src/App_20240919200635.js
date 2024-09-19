@@ -51,6 +51,7 @@ const App = () => {
               dirty,
             }) => (
               <form className="register-form" onSubmit={handleSubmit}>
+                {/* Name Field */}
                 <div className="form-group">
                   <label htmlFor="name">
                     <i className="zmdi zmdi-account material-icons-name"></i>
@@ -70,6 +71,7 @@ const App = () => {
                   )}
                 </div>
 
+                {/* Email Field */}
                 <div className="form-group">
                   <label htmlFor="email">
                     <i className="zmdi zmdi-email"></i>
@@ -89,6 +91,7 @@ const App = () => {
                   )}
                 </div>
 
+                {/* Password Field */}
                 <div className="form-group">
                   <label htmlFor="pass">
                     <i className="zmdi zmdi-lock"></i>
@@ -108,6 +111,7 @@ const App = () => {
                   )}
                 </div>
 
+                {/* Confirm Password Field */}
                 <div className="form-group">
                   <label htmlFor="re_pass">
                     <i className="zmdi zmdi-lock-outline"></i>
@@ -127,6 +131,7 @@ const App = () => {
                   )}
                 </div>
 
+                {/* Terms Checkbox */}
                 <div className="form-group">
                   <input
                     type="checkbox"
@@ -137,13 +142,17 @@ const App = () => {
                     onChange={handleChange}
                   />
                   <label htmlFor="agree-term" className="label-agree-term">
-                    I agree to all statements in the Terms of Service
+                    I agree to all statements in the{" "}
+                    <a href="#" className="term-service">
+                      Terms of Service
+                    </a>
                   </label>
                   {touched.agreeTerm && errors.agreeTerm && (
                     <div className="error-message">{errors.agreeTerm}</div>
                   )}
                 </div>
 
+                {/* Submit Button */}
                 <div className="form-group form-button">
                   <button
                     type="submit"

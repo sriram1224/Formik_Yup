@@ -1,3 +1,5 @@
+/* App.css */
+
 .signup-content {
   display: flex;
   justify-content: space-around;
@@ -6,12 +8,8 @@
   background-color: #f8f9fa;
 }
 
-.norm {
-  display: flex;
-  justify-content: space-around;
-}
-
 .signup-form {
+  width: 400px;
   padding: 40px;
   background: #fff;
   border-radius: 10px;
