@@ -1,4 +1,3 @@
-
 # Formik and Yup Form Validation
 
 This project is a simple form built with React, Formik, and Yup for form handling and validation. It demonstrates basic user input validation including fields like name, email, password, and terms agreement.
@@ -13,6 +12,7 @@ This project is a simple form built with React, Formik, and Yup for form handlin
 
 ## Project Structure
 
+`
 .
 ├── public
 │   └── index.html
@@ -22,6 +22,8 @@ This project is a simple form built with React, Formik, and Yup for form handlin
 │   └── index.js
 ├── .gitignore
 └── README.md
+`
+
 Technologies Used
 React for building the user interface.
 Formik for form handling.
