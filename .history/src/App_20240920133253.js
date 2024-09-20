@@ -4,22 +4,6 @@ import * as Yup from "yup";
 import "./App.css";
 
 // Validation schema using Yup
-const validationSchema = Yup.object({
-  name: Yup.string().required("Name is required"),
-  email: Yup.string()
-    .email("Invalid email address")
-    .required("Email is required"),
-  pass: Yup.string()
-    .matches(/rishiME@199/, 'Password must include "rishiME@199"')
-    .required("Password is required"),
-  re_pass: Yup.string()
-    .oneOf([Yup.ref("pass")], "Passwords must match")
-    .required("Confirm your password"),
-  agreeTerm: Yup.bool().oneOf(
-    [true],
-    "You must accept the terms and conditions"
-  ),
-});
 
 const App = () => {
   return (
